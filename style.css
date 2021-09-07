@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(227, 212, 21), rgb(193, 200, 230));;
+}
+
+main {
+    border: 1px solid black;
+    width: 60vw;
+    height: 55vh;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.forecast {
+    border: 1px solid black;
+    width: 60vw;
+    height: 35vh;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.weather-info {
+    border: 1px solid black;
+    width: 40vw;
+    height: 55vh;
+}
+
+.weather-details {
+    border: 1px solid black;
+    width: 20vw;
+    height: 55vh;
+}
+
+.forecast .forecast-tomorrow {
+    border: 1px solid black;
+    width: 30vw;
+    height: 35vh;
+}
+
+.forecast .forecast-day-after-tomorrow {
+    border: 1px solid black;
+    width: 30vw;
+    height: 35vh;
+}
