@@ -48,13 +48,13 @@ main {
     justify-content: space-around;
 }
 
-.forecast .forecast-tomorrow {
+.forecast .forecast-min {
     border: 1px solid black;
     width: 30vw;
     height: 35vh;
 }
 
-.forecast .forecast-day-after-tomorrow {
+.forecast .forecast-max {
     border: 1px solid black;
     width: 30vw;
     height: 35vh;

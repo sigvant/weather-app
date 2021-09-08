@@ -1,3 +1,5 @@
+let apikey = config.MY_API_TOKEN;
+
 const weatherDescription = document.querySelector('.weather-description');
 const weatherCity = document.querySelector('.weather-city-name');
 const weatherTemp = document.querySelector('.weather-feels-like');
@@ -18,6 +20,7 @@ let units = 'metric';
 requestForm.addEventListener('submit', (event) => {
     event.preventDefault();
     query = newWeatherInput.value;
+    if(query === '') return;
     getWeatherData();
 })
 
@@ -26,7 +29,7 @@ requestForm.addEventListener('submit', (event) => {
 async function fetchWeatherData(query) {
     
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=86b625b781f7ebc6b0a33dd8d7c37d66`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=${apikey}`);
         const data = await response.json();    
         return data;
     } catch (error) {
@@ -42,7 +45,7 @@ async function getWeatherData() {
     weatherDescription.textContent = data.weather[0].description;
     weatherCity.textContent = data.name + ', ' + data.sys.country;
     //convert this to celsius
-    weatherTemp.textContent = data.main.feels_like + ' ' + 'K';
+    weatherTemp.textContent = "Feels like" + ' ' + data.main.feels_like + ' ' + 'C';
 
     // population details
     weatherDetailLat.textContent = "Latitude" + ' ' + data.coord.lat + '°'; 
