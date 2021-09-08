@@ -8,24 +8,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, rgb(71, 70, 44), rgb(63, 67, 88));;
-    font-family: monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     font-size: 1rem;
+    background-size: cover;
 }
 
 main {
     border: 1px solid black;
-    width: 80vw;
-    height: 55vh;
+    width: 100vw;
+    height: 60vh;
     margin-top: 2rem;
     display: flex;
+    justify-content: space-between;
 }
 
 .forecast {
     border: 1px solid black;
     width: 60vw;
-    height: 35vh;
+    height: 20vh;
     margin-top: 2rem;
     display: flex;
 }
@@ -33,7 +34,7 @@ main {
 .weather-info {
     border: 1px solid black;
     width: 50vw;
-    height: 55vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -43,7 +44,7 @@ main {
 .weather-details {
     border: 1px solid black;
     width: 30vw;
-    height: 55vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +54,7 @@ main {
 .forecast .forecast-min {
     border: 1px solid black;
     width: 30vw;
-    height: 35vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +64,7 @@ main {
 .forecast .forecast-max {
     border: 1px solid black;
     width: 30vw;
-    height: 35vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,14 +183,20 @@ main {
     box-shadow: 0px 0px 4px 4px black;
 }
 
-.fas .fa-tint {
+.fas {
     color: white;
-    height: 1rem;
-    width: 1rem;
-    font-size: 10px;
+    font-size: 35px;
 }
 
-.icon-ctn {
-    height: 1rem;
-    width: 1rem;
+.humidity-ctn,
+.pressure-ctn,
+.visibility-ctn,
+.wind-angle-ctn,
+.wind-speed-ctn,
+.latitude-ctn,
+.longitude-ctn,
+.min-ctn,
+.max-ctn {
+    display: flex;
+    align-items: center;
 }

@@ -1,4 +1,5 @@
 let apikey = config.MY_API_TOKEN;
+let unsplash_key = config.unsplash_key;
 
 const weatherDescription = document.querySelector('.weather-description');
 const weatherCity = document.querySelector('.weather-city-name');
@@ -27,9 +28,22 @@ requestForm.addEventListener('submit', (event) => {
     query = newWeatherInput.value;
     if(query === '') return;
     getWeatherData();
+    fetchBackgroundImage(query);
 })
 
 
+async function fetchBackgroundImage(query) {
+    try {
+        const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${unsplash_key}`);
+        const data = await response.json();
+        let link = (data.results[0].urls.regular);
+        console.log(link)
+        document.body.style.backgroundImage = `url(${link})`;
+        document.body.style.backgroundSize = 'cover';
+    } catch {
+        console.error('Oops!');
+    }
+}
 
 async function fetchWeatherData(query) {
     
@@ -88,3 +102,4 @@ async function getWeatherData() {
 }
 
 getWeatherData();
+fetchBackgroundImage(query);
