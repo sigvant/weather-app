@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     font-size: 1rem;
@@ -18,41 +18,52 @@ body {
 main {
     width: 80vw;
     height: 70vh;
-    margin-top: 2rem;
+    margin-top: 5rem;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.weather-info {
+    
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.weather-details {
+    
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .forecast {
     
     width: 60vw;
-    height: 20vh;
-    margin-top: 2rem;
+    height: 30vh;    
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem 1rem;
+    margin-bottom: 10rem;
 }
 
-.weather-info {
-    
-    width: 50vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.weather-details {
-    
-    width: 30vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
 
 .forecast .forecast-min {
     
@@ -76,24 +87,24 @@ main {
 
 .weather-description {
     
-    margin: 2rem;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     font-size: 2rem;
     
 }
 
 .weather-city-name {
     
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     font-size: 2rem;
     
 }
 
 .weather-feels-like {
     
-    margin: 2rem;
-    padding: 2rem;
+    margin: 1rem;
+    padding: 1rem;
     font-size: 2rem;
     
 }
@@ -156,6 +167,7 @@ main {
 .request-city {
     margin: 2rem;
     padding: 2rem;
+    display: flex;
 }
 
 .request {
@@ -192,6 +204,11 @@ main {
     
 }
 
+.forecast-min,
+.forecast-max {
+    text-align: center;
+}
+
 .fas {
     color: white;
     font-size: 35px;
@@ -208,4 +225,23 @@ main {
 .max-ctn {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        height: 135vh;
+        margin-bottom: 1rem;
+        margin-top: 25rem;
+
+    }
+
+    body {
+        height: 180vh;
+    }
+
+    .forecast {
+        margin-bottom: 25rem;
+    }
 }

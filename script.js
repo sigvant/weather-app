@@ -60,7 +60,7 @@ async function getWeatherData() {
     // if()
 
     // populatimg the dom with the info fetched
-    weatherDescription.textContent = data.weather[0].description + ' ...';
+    weatherDescription.textContent = data.weather[0].description;
     weatherCity.textContent = data.name + ', ' + data.sys.country;
     //convert this to celsius
     weatherTemp.textContent = "Feels like" + ' ' + data.main.feels_like + ' ' + '°C';
