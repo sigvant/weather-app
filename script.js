@@ -8,9 +8,19 @@ const weatherDetailPre = document.querySelector(".detail-pre")
 const weatherDetailVis = document.querySelector(".detail-vis")
 const weatherDetailWinDeg = document.querySelector(".detail-win-deg")
 const weatherDetailWinSpe = document.querySelector(".detail-win-spe")
+const newWeatherInput = document.querySelector('.select-city');
+const requestButton = document.querySelector('.request');
+const requestForm = document.querySelector('.request-city');
 
 let query = 'London';
 let units = 'metric';
+
+requestForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    query = newWeatherInput.value;
+    getWeatherData();
+})
+
 
 
 async function fetchWeatherData(query) {

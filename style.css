@@ -136,3 +136,10 @@ main {
     padding: 0.5rem;
     box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
 }
+
+.request {
+    border: 2px solid rgba(5, 5, 70, 0.659);
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
+}
