@@ -14,7 +14,12 @@ const newWeatherInput = document.querySelector('.select-city');
 const requestButton = document.querySelector('.request');
 const requestForm = document.querySelector('.request-city');
 
-let query = 'London';
+const weatherTempMin = document.querySelector('.temp-min');
+const weatherTempMax = document.querySelector('.temp-max');
+const weatherSunrise = document.querySelector('.sunrise');
+const weatherSunset = document.querySelector('.sunset');
+
+let query = 'Utrecht';
 let units = 'metric';
 
 requestForm.addEventListener('submit', (event) => {
@@ -32,20 +37,20 @@ async function fetchWeatherData(query) {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=${units}&appid=${apikey}`);
         const data = await response.json();    
         return data;
-    } catch (error) {
-        console.error(error);
+    } catch {
+        console.log('City not Found');
     }
 }
 
 async function getWeatherData() {
     const data = await fetchWeatherData(query);
-    console.log(data);
+    // if()
 
     // populatimg the dom with the info fetched
     weatherDescription.textContent = data.weather[0].description;
     weatherCity.textContent = data.name + ', ' + data.sys.country;
     //convert this to celsius
-    weatherTemp.textContent = "Feels like" + ' ' + data.main.feels_like + ' ' + 'C';
+    weatherTemp.textContent = "Feels like" + ' ' + data.main.feels_like + ' ' + '°C';
 
     // population details
     weatherDetailLat.textContent = "Latitude" + ' ' + data.coord.lat + '°'; 
@@ -54,7 +59,31 @@ async function getWeatherData() {
     weatherDetailPre.textContent = "Pressure" + ' ' + data.main.pressure + ' Pa';
     weatherDetailVis.textContent = "Visibility" + ' ' + data.visibility + ' m';
     weatherDetailWinDeg.textContent = "Wind Angle" + ' ' + data.wind.deg + '°';
-    weatherDetailWinSpe.textContent = "Wind Speed" + ' ' + data.wind.speed + ' m/s';
+    weatherDetailWinSpe.textContent = "Wind Speed" + ' ' + data.wind.speed + ' km/h';
+
+    // population forecast info
+    weatherTempMin.textContent = "Min Temperature" + ' ' + data.main.temp_min + '°C'
+    weatherTempMax.textContent = "Max Temperature" + ' ' + data.main.temp_max + '°C'
+
+    // functions to get sunrise and sunset time
+    // sunrise
+    let sunriseTime = data.sys.sunrise;
+    let sunriseDate = new Date(sunriseTime * 1000);
+    let sunriseHours = sunriseDate.getUTCHours();
+    let sunriseMinutes = "0" + sunriseDate.getUTCMinutes();
+    let sunriseSeconds = "0" + sunriseDate.getUTCSeconds();
+    let sunriseFormattedTime = sunriseHours + ':' + sunriseMinutes.substr(-2) + ':' + sunriseSeconds.substr(-2);
+
+    // sunset
+    let sunsetTime = data.sys.sunset;
+    let sunsetDate = new Date(sunsetTime * 1000);
+    let sunsetHours = sunsetDate.getUTCHours();
+    let sunsetMinutes = "0" + sunsetDate.getUTCMinutes();
+    let sunsetSeconds = "0" + sunsetDate.getUTCSeconds();
+    let sunsetFormattedTime = sunsetHours + ':' + sunsetMinutes.substr(-2) + ':' + sunsetSeconds.substr(-2);
+
+    weatherSunrise.textContent = "Expected Sunrise at" + ' ' + sunriseFormattedTime;
+    weatherSunset.textContent = "Expected Sunset at" + ' ' + sunsetFormattedTime;
     
 }
 

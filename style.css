@@ -8,8 +8,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, rgb(227, 212, 21), rgb(193, 200, 230));;
+    background: linear-gradient(to right, rgb(71, 70, 44), rgb(63, 67, 88));;
     font-family: monospace;
+    color: white;
+    font-size: 1rem;
 }
 
 main {
@@ -52,12 +54,20 @@ main {
     border: 1px solid black;
     width: 30vw;
     height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .forecast .forecast-max {
     border: 1px solid black;
     width: 30vw;
     height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .weather-description {
@@ -142,4 +152,44 @@ main {
     margin: 1rem;
     padding: 0.5rem;
     box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
+}
+
+.forecast-min .temp-min {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.forecast-min .sunrise {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.forecast-max .temp-max {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.forecast-max .sunset {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.fas .fa-tint {
+    color: white;
+    height: 1rem;
+    width: 1rem;
+    font-size: 10px;
+}
+
+.icon-ctn {
+    height: 1rem;
+    width: 1rem;
 }

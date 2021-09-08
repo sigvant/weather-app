@@ -21,7 +21,13 @@
     <div class="weather-details">
         <div class="detail-lat"></div>
         <div class="detail-lon"></div>
-        <div class="detail-hum"></div>
+        <div class="humidity-ctn">
+            <div class="icon-ctn">
+                <i class="fas fa-tint"></i>
+            </div>
+                <div class="detail-hum">
+            </div>
+        </div>
         <div class="detail-pre"></div>
         <div class="detail-vis"></div>
         <div class="detail-win-deg"></div>
@@ -30,11 +36,17 @@
     </div>
 </main>
 <div class='forecast'>
-    <div class="forecast-min"></div>    
-    <div class="forecast-max"></div>
+    <div class="forecast-min">
+        <div class="temp-min"></div>   
+        <div class="sunrise"></div>
+    </div>     
+    <div class="forecast-max">
+        <div class="temp-max"></div>   
+        <div class="sunset"></div>
+    </div>
 </div>
 
-
+<script src="https://kit.fontawesome.com/6f1c980808.js" crossorigin="anonymous"></script>
 <script src="config.js"></script>
 <script src="script.js"></script>
 </body>
