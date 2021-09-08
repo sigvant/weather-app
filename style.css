@@ -12,27 +12,30 @@ body {
     color: white;
     font-size: 1rem;
     background-size: cover;
+    transition: all 1s ;
 }
 
 main {
-    border: 1px solid black;
-    width: 100vw;
-    height: 60vh;
+    width: 80vw;
+    height: 70vh;
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
 }
 
 .forecast {
-    border: 1px solid black;
+    
     width: 60vw;
     height: 20vh;
     margin-top: 2rem;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .weather-info {
-    border: 1px solid black;
+    
     width: 50vw;
     height: 60vh;
     display: flex;
@@ -42,7 +45,7 @@ main {
 }
 
 .weather-details {
-    border: 1px solid black;
+    
     width: 30vw;
     height: 60vh;
     display: flex;
@@ -52,7 +55,7 @@ main {
 }
 
 .forecast .forecast-min {
-    border: 1px solid black;
+    
     width: 30vw;
     height: 20vh;
     display: flex;
@@ -62,7 +65,7 @@ main {
 }
 
 .forecast .forecast-max {
-    border: 1px solid black;
+    
     width: 30vw;
     height: 20vh;
     display: flex;
@@ -72,115 +75,121 @@ main {
 }
 
 .weather-description {
-    border: 1px solid black;
+    
     margin: 2rem;
     padding: 2rem;
-    box-shadow: 0px 0px 4px 4px black;
+    font-size: 2rem;
+    
 }
 
 .weather-city-name {
-    border: 1px solid black;
-    margin: 2rem;
-    padding: 2rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    
 }
 
 .weather-feels-like {
-    border: 1px solid black;
+    
     margin: 2rem;
     padding: 2rem;
-    box-shadow: 0px 0px 4px 4px black;
+    font-size: 2rem;
+    
 }
 
 .detail-lat {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .detail-lon {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .detail-hum {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .detail-pre {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }   
 
 .detail-vis {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .detail-win-deg {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }   
 
 .detail-win-spe {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .select-city {
     border: 2px solid rgba(5, 5, 70, 0.659);
     margin: 1rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
+}
+
+.request-city {
+    margin: 2rem;
+    padding: 2rem;
 }
 
 .request {
     border: 2px solid rgba(5, 5, 70, 0.659);
     margin: 1rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
 }
 
 .forecast-min .temp-min {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .forecast-min .sunrise {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .forecast-max .temp-max {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .forecast-max .sunset {
-    border: 1px solid black;
+    
     margin: 0.5rem;
     padding: 0.5rem;
-    box-shadow: 0px 0px 4px 4px black;
+    
 }
 
 .fas {

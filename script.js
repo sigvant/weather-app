@@ -36,8 +36,7 @@ async function fetchBackgroundImage(query) {
     try {
         const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${unsplash_key}`);
         const data = await response.json();
-        let link = (data.results[0].urls.regular);
-        console.log(link)
+        let link = (data.results[0].urls.full);
         document.body.style.backgroundImage = `url(${link})`;
         document.body.style.backgroundSize = 'cover';
     } catch {
@@ -61,7 +60,7 @@ async function getWeatherData() {
     // if()
 
     // populatimg the dom with the info fetched
-    weatherDescription.textContent = data.weather[0].description;
+    weatherDescription.textContent = data.weather[0].description + ' ...';
     weatherCity.textContent = data.name + ', ' + data.sys.country;
     //convert this to celsius
     weatherTemp.textContent = "Feels like" + ' ' + data.main.feels_like + ' ' + '°C';
