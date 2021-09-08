@@ -239,9 +239,26 @@ main {
 
     body {
         height: 180vh;
+        font-size: 1rem;
     }
 
     .forecast {
         margin-bottom: 25rem;
+    }
+
+    .request-city {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .request {
+        max-width: 10vw;
+    }
+
+    .weather-city-name,
+    .weather-feels-like,
+    .weather-description {
+        font-size: 1.2rem;
     }
 }
