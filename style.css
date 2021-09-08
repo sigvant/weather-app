@@ -50,6 +50,7 @@ main {
     background-color: rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;
     text-align: center;
+    padding: 2rem;
 }
 
 .forecast {
@@ -234,7 +235,6 @@ main {
         height: 135vh;
         margin-bottom: 1rem;
         margin-top: 25rem;
-
     }
 
     body {
@@ -244,6 +244,7 @@ main {
 
     .forecast {
         margin-bottom: 25rem;
+        margin-top: 1rem;
     }
 
     .request-city {
@@ -261,4 +262,74 @@ main {
     .weather-description {
         font-size: 1.2rem;
     }
+
+    .humidity-ctn,
+    .pressure-ctn,
+    .visibility-ctn,
+    .wind-angle-ctn,
+    .wind-speed-ctn,
+    .latitude-ctn,
+    .longitude-ctn,
+    .min-ctn,
+    .max-ctn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 350px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        height: 135vh;
+        margin-bottom: 1rem;
+        margin-top: 25rem;
+    }
+
+    body {
+        height: 180vh;
+        font-size: 0.7rem;
+    }
+
+    .forecast {
+        margin-bottom: 25rem;
+        margin-top: 1rem;
+    }
+
+    .request-city {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .select-city {
+        min-width: 100px;
+    }
+
+    .request {
+        min-width: 2.5rem;
+    }
+
+    .weather-city-name,
+    .weather-feels-like,
+    .weather-description {
+        font-size: 0.8rem;
+    }
+
+    .humidity-ctn,
+    .pressure-ctn,
+    .visibility-ctn,
+    .wind-angle-ctn,
+    .wind-speed-ctn,
+    .latitude-ctn,
+    .longitude-ctn,
+    .min-ctn,
+    .max-ctn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
 }
