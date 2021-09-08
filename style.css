@@ -9,11 +9,12 @@ body {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(to right, rgb(227, 212, 21), rgb(193, 200, 230));;
+    font-family: monospace;
 }
 
 main {
     border: 1px solid black;
-    width: 60vw;
+    width: 80vw;
     height: 55vh;
     margin-top: 2rem;
     display: flex;
@@ -29,14 +30,22 @@ main {
 
 .weather-info {
     border: 1px solid black;
-    width: 40vw;
+    width: 50vw;
     height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .weather-details {
     border: 1px solid black;
-    width: 20vw;
+    width: 30vw;
     height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .forecast .forecast-tomorrow {
@@ -49,4 +58,81 @@ main {
     border: 1px solid black;
     width: 30vw;
     height: 35vh;
+}
+
+.weather-description {
+    border: 1px solid black;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.weather-city-name {
+    border: 1px solid black;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.weather-feels-like {
+    border: 1px solid black;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.detail-lat {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.detail-lon {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.detail-hum {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.detail-pre {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}   
+
+.detail-vis {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.detail-win-deg {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}   
+
+.detail-win-spe {
+    border: 1px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px black;
+}
+
+.select-city {
+    border: 2px solid rgba(5, 5, 70, 0.659);
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px 4px rgba(5, 5, 70, 0.659);
 }
